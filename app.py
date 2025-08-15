@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 from io import BytesIO
+from imblearn.over_sampling import SMOTE
+from imblearn.pipeline import Pipeline
 
 # Load model
 model = joblib.load('best_model_ecomerce_churn.pkl')
@@ -95,3 +97,4 @@ else:
                 file_name='hasil_prediksi_churn.xlsx',
                 mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
             )
+
