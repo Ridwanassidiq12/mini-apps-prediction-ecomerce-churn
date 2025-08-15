@@ -4,6 +4,12 @@ import joblib
 from io import BytesIO
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline
+from imblearn.pipeline import Pipeline
+from imblearn.over_sampling import SMOTE
+from lightgbm import LGBMClassifier  
+from sklearn.impute import KNNImputer
+from sklearn.preprocessing import OneHotEncoder, RobustScaler
+from sklearn.compose import ColumnTransformer
 
 # Load model
 model = joblib.load('best_model_ecomerce_churn.pkl')
@@ -97,4 +103,5 @@ else:
                 file_name='hasil_prediksi_churn.xlsx',
                 mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
             )
+
 
