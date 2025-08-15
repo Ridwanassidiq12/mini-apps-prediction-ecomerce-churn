@@ -1,7 +1,0 @@
-streamlit
-pandas
-scikit-learn
-imbalanced-learn
-lightgbm
-openpyxl
-xlsxwriter
